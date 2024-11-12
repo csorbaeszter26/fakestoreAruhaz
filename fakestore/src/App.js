@@ -3,6 +3,9 @@ import Termekek from './components/Termekek';
 import Kosar from './components/Kosar';
 import { useContext } from 'react';
 import { ApiContext } from './contexts/ApiContext';
+import Public from './pages/Public';
+import Urlap from './contexts/Urlap';
+import Admin from './pages/Admin';
 
 function App() {
 
@@ -12,15 +15,9 @@ function App() {
       <header className="App-header">
         <h1>Fakestore webáruház</h1>
       </header>
-      <main className='row'>
-        <aside className='col-lg-3'>
-          <h3>Kosár</h3>
-          <Kosar/>
-        </aside>
-        <article className='col-lg-9'>
-          <h3>Termékek</h3>
-          <Termekek termekLista={termekLista}/>
-        </article>
+      
+      <main>
+        <Admin/>
       </main>
     </div>
   );
